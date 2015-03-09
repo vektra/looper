@@ -49,7 +49,7 @@ func main() {
 	flag.BoolVar(&debug, "debug", false, "adds additional logging")
 	flag.Parse()
 
-	runner := gat.Run{Tags: tags}
+	runner := &gat.Run{Tags: tags}
 
 	Header()
 	if debug {

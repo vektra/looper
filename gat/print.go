@@ -2,9 +2,10 @@ package gat
 
 import (
 	"fmt"
-	"github.com/koyachi/go-term-ansicolor/ansicolor"
 	"strings"
 	"time"
+
+	"github.com/koyachi/go-term-ansicolor/ansicolor"
 )
 
 func PrintCommand(args []string) {
@@ -14,6 +15,12 @@ func PrintCommand(args []string) {
 
 func PrintCommandOutput(out []byte) {
 	fmt.Print(string(out))
+}
+
+func PrintRerun(text string) {
+	ClearPrompt()
+
+	fmt.Println(ansicolor.Magenta(text))
 }
 
 func RedGreen(pass bool) {
